@@ -3,6 +3,8 @@
 HeckerVim is built around a small set of composable actions.
 Most workflows start with the **leader** key which defaults to `,` ([here](https://github.com/mariusmagureanu/hecker-vim/blob/master/nvim/lua/hecker/lazy.lua#L1)).
 
+The keymap described below is implemented [here](https://github.com/mariusmagureanu/hecker-vim/blob/master/nvim/lua/hecker/keymap.lua).
+
 ---
 
 ### Navigation & Search (Telescope)
