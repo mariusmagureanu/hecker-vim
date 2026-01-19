@@ -15,19 +15,10 @@ keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current c
 -- nvim-tree
 keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
 
--- Lspsaga
-keymap.set("n", "gh", "<cmd>Lspsaga finder<CR>")
-keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
-
-keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>")
-keymap.set("n", "gR", "<cmd>Lspsaga rename ++project<CR>")
-
-keymap.set("n", "gD", "<cmd>Lspsaga peek_definition<CR>")
-keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
-
-keymap.set("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
-keymap.set("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
-keymap.set("n", "<Leader>o", "<cmd>Lspsaga outline<CR>")
+-- Trouble
+keymap.set("n", "<leader>gr", vim.lsp.buf.rename, {desc = "Rename symbol"})
+keymap.set("n", "<leader>tr", "<cmd>Trouble lsp_references<cr>", {desc = "References"})
+keymap.set("n", "<leader>td", "<cmd>Trouble diagnostics<cr>", {desc = "Diagnostics"})
 
 -- Tagbar
 keymap.set("n", "<Leader>tb", "<cmd>TagbarToggle<CR>")
