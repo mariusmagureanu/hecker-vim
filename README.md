@@ -9,7 +9,7 @@
 My stripped down Lua-powered Neovim configuration.
 Lazy-loaded plugins, Treesitter magic and zero startup surprises.
 
-Built by me for myself!
+Built by me for myself, but you're more then welcome to try it out too.
 
 ---
 
