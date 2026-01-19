@@ -1,7 +1,7 @@
 ### Usage
 
 HeckerVim is built around a small set of composable actions.
-Most workflows start with <leader>, which defaults to `,`.
+Most workflows start with the **leader** key which defaults to `,` ([here](https://github.com/mariusmagureanu/hecker-vim/blob/master/nvim/lua/hecker/lazy.lua#L1)).
 
 ---
 
@@ -9,17 +9,17 @@ Most workflows start with <leader>, which defaults to `,`.
 
 Fast, fuzzy, and scoped to your current working directory.
 
-- ,ff — Find files (respects .gitignore)
+- `<leader>`ff — Find files (respects .gitignore)
 
-- ,fs — Live grep (search as you type)
+- `<leader>`fs — Live grep (search as you type)
 
-- ,fc — Search for word under cursor
+- `<leader>`fc — Search for word under cursor
 
-- ,fb — List open buffers
+- `<leader>`fb — List open buffers
 
-- ,fh — Browse Neovim help
+- `<leader>`fh — Browse Neovim help
 
-Use this for most navigation. If you’re reaching for :ls or :grep, Telescope probably does it better.
+Use this for most navigation. If you’re reaching for ``:ls`` or ``:grep``, Telescope probably does it better.
 
 ---
 
@@ -27,13 +27,13 @@ Use this for most navigation. If you’re reaching for :ls or :grep, Telescope p
 
 All Git interactions stay inside Neovim.
 
-- ,gc — Browse all git commits
+- `<leader>`gc — Browse all git commits
 
-- ,gfc — Browse commits for the current file
+- `<leader>`gfc — Browse commits for the current file
 
-- ,gb — List and checkout branches
+- `<leader>`gb — List and checkout branches
 
-- ,gs — Git status with diff preview
+- `<leader>`gs — Git status with diff preview
 
 Useful for quick context switching, reviews, and history inspection without leaving the editor.
 
@@ -41,7 +41,7 @@ Useful for quick context switching, reviews, and history inspection without leav
 
 ### File Tree
 
-- ,e — Toggle file explorer
+- `<leader>`e — Toggle file explorer
 
 Use this when you want a persistent project view instead of fuzzy navigation.
 
@@ -65,15 +65,15 @@ Code navigation
 
 - gR — Rename symbol across project
 
-- ,ca — Code actions (normal or visual mode)
+- `<leader>`ca — Code actions (normal or visual mode)
 
 **Call hierarchy & structure**
 
-- ,ci — Incoming calls
+- `<leader>`ci — Incoming calls
 
-- ,co — Outgoing calls
+- `<leader>`co — Outgoing calls
 
-- ,o — File outline (symbols)
+- `<leader>`o — File outline (symbols)
 
 ---
 
@@ -81,7 +81,7 @@ Lspsaga wraps Neovim’s built-in LSP with floating views and interactive panels
 
 ### Symbols & Structure (Tagbar)
 
-- ,tb — Toggle Tagbar
+- `<leader>`tb — Toggle Tagbar
 
 Displays a structural outline of the current file (functions, types, methods). Useful for large files or unfamiliar codebases.
 
