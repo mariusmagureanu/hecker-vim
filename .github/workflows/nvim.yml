@@ -1,0 +1,24 @@
+name: Neovim config validation
+on:
+  push:
+  pull_request:
+jobs:
+  nvim:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Neovim
+        uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: stable
+      - name: Validate config and install plugins
+        run: |
+          XDG_CONFIG_HOME=$PWD \
+          XDG_DATA_HOME=$PWD/.data \
+          XDG_STATE_HOME=$PWD/.state \
+          XDG_CACHE_HOME=$PWD/.cache \
+          nvim --headless \
+            -u $PWD/init.lua \
+            "+Lazy! sync" \
+            "+qa"
