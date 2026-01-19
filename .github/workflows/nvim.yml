@@ -1,4 +1,4 @@
-name: Neovim config validation
+name: Neovim config check
 on:
   push:
   pull_request:
@@ -12,13 +12,10 @@ jobs:
         with:
           neovim: true
           version: stable
-      - name: Validate config and install plugins
+      - name: Install plugins and validate config
         run: |
           XDG_CONFIG_HOME=$PWD \
           XDG_DATA_HOME=$PWD/.data \
           XDG_STATE_HOME=$PWD/.state \
           XDG_CACHE_HOME=$PWD/.cache \
-          nvim --headless \
-            -u $PWD/init.lua \
-            "+Lazy! sync" \
-            "+qa"
+          nvim --headless "+Lazy! sync" "+qa"
