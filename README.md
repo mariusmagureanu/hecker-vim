@@ -18,21 +18,22 @@ Built by me for myself!
 ```sh
 $ git clone git@github.com:mariusmagureanu/hecker-vim.git
 $ ln -sf $(pwd)/nvim ~/.config/nvim
-$ nvim --headless "+Lazy! sync" "+qa"
 ```
 
 ---
 
 ### Plugins
 
+The following list contains the main plugins found in HeckerVim.
+
+For a complete overview browse the [plugins](https://github.com/mariusmagureanu/hecker-vim/tree/master/nvim/lua/hecker/plugins) folder in this repository.
+
 * [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) — Syntax highlighting, incremental parsing, and code-aware features.
-
+* [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) - A file explorer For Neovim.
 * [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) — Fuzzy finder and highly extendable search interface.
-
 * [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim) — Linting, formatting, and code actions using external tools.
-
 * [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) — Git integration: signs, hunks, and inline blame.
-
 * [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) — Fast and customizable status line.
-
 * [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) — Utility library required by many plugins, including Telescope.
+* [colorful-menu](https://github.com/xzbdmw/colorful-menu.nvim) - Reconstructs completion item and applies treesitter highlight queries to produce variable-size highlight ranges.
+* [blink.cmp](https://github.com/saghen/blink.cmp) - Code autocomplete capabilities.
