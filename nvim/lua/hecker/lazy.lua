@@ -1,5 +1,5 @@
 local LEADER = ","
-local THEME = "ayu-dark"
+local THEME = "ayu-mirage"
 local LAZY_THEME = "desert"
 local LAZY_PATH = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 local LAZY_REPO = "https://github.com/folke/lazy.nvim.git"
