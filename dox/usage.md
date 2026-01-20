@@ -1,96 +1,137 @@
-### Usage
+### Usage — Snacks Keybindings
 
-HeckerVim is built around a small set of composable actions.
-Most workflows start with the **leader** key which defaults to `,` ([here](https://github.com/mariusmagureanu/hecker-vim/blob/master/nvim/lua/hecker/lazy.lua#L1)).
+This document describes the default keybindings provided by **Snacks** in HeckerVim.
+All mappings are designed to be mnemonic, composable, and discoverable.
 
-The keymap described below is implemented [here](https://github.com/mariusmagureanu/hecker-vim/blob/master/nvim/lua/hecker/keymap.lua).
-
----
-
-### Navigation & Search (Telescope)
-
-Fast, fuzzy, and scoped to your current working directory.
-
-- `<leader>`ff — Find files (respects .gitignore)
-
-- `<leader>`fs — Live grep (search as you type)
-
-- `<leader>`fc — Search for word under cursor
-
-- `<leader>`fb — List open buffers
-
-- `<leader>`fh — Browse Neovim help
-
-Use this for most navigation. If you’re reaching for ``:ls`` or ``:grep``, Telescope probably does it better.
+`<leader>` defaults to `,` unless overridden.
 
 ---
 
-### Git workflows (Telescope + Git)
+### Top Pickers & Explorer
 
-All Git interactions stay inside Neovim.
-
-- `<leader>`gc — Browse all git commits
-
-- `<leader>`gfc — Browse commits for the current file
-
-- `<leader>`gb — List and checkout branches
-
-- `<leader>`gs — Git status with diff preview
-
-Useful for quick context switching, reviews, and history inspection without leaving the editor.
+| Key               | Action               |
+| ----------------- | -------------------- |
+| `<leader><space>` | Smart find files     |
+| `<leader>,`       | Switch buffers       |
+| `<leader>/`       | Grep (project-wide)  |
+| `<leader>:`       | Command history      |
+| `<leader>n`       | Notification history |
+| `<leader>e`       | File explorer        |
 
 ---
 
-### File Tree
+### File & Project Navigation
 
-- `<leader>`e — Toggle file explorer
-
-Use this when you want a persistent project view instead of fuzzy navigation.
-
----
-
-### LSP actions (Lspsaga)
-
-Language intelligence with a clean UI.
-
-Code navigation
-
-- gd — Go to definition
-
-- gD — Peek definition (without leaving context)
-
-- gh — Finder (definitions, references, implementations)
-
-**Refactoring & actions**
-
-- gr — Rename symbol
-
-- gR — Rename symbol across project
-
-- `<leader>`ca — Code actions (normal or visual mode)
-
-**Call hierarchy & structure**
-
-- `<leader>`ci — Incoming calls
-
-- `<leader>`co — Outgoing calls
-
-- `<leader>`o — File outline (symbols)
+| Key          | Action                 |
+| ------------ | ---------------------- |
+| `<leader>fb` | Find buffers           |
+| `<leader>fc` | Find config files      |
+| `<leader>ff` | Find files             |
+| `<leader>fg` | Find git-tracked files |
+| `<leader>fp` | Projects               |
+| `<leader>fr` | Recent files           |
 
 ---
 
-Lspsaga wraps Neovim’s built-in LSP with floating views and interactive panels. No magic, just better ergonomics.
+### Git
 
-### Symbols & Structure (Tagbar)
-
-- `<leader>`tb — Toggle Tagbar
-
-Displays a structural outline of the current file (functions, types, methods). Useful for large files or unfamiliar codebases.
+| Key          | Action                 |
+| ------------ | ---------------------- |
+| `<leader>gb` | Git branches           |
+| `<leader>gl` | Git log                |
+| `<leader>gL` | Git log (current line) |
+| `<leader>gs` | Git status             |
+| `<leader>gS` | Git stash              |
+| `<leader>gd` | Git diff (hunks)       |
+| `<leader>gf` | Git log (current file) |
 
 ---
 
-### Formatting
+### GitHub
 
-Formatting happens automatically on save:
+| Key          | Action               |
+| ------------ | -------------------- |
+| `<leader>gi` | GitHub issues (open) |
+| `<leader>gI` | GitHub issues (all)  |
+| `<leader>gp` | GitHub PRs (open)    |
+| `<leader>gP` | GitHub PRs (all)     |
 
-On `:write`, the active LSP formats the buffer synchronously.
+---
+
+### Grep & Text Search
+
+| Key          | Action                       |
+| ------------ | ---------------------------- |
+| `<leader>sb` | Buffer lines                 |
+| `<leader>sB` | Grep open buffers            |
+| `<leader>sg` | Grep                         |
+| `<leader>sw` | Grep word / visual selection |
+
+---
+
+### Search & Introspection
+
+| Key          | Action             |
+| ------------ | ------------------ |
+| `<leader>s"` | Registers          |
+| `<leader>s/` | Search history     |
+| `<leader>sa` | Autocommands       |
+| `<leader>sc` | Command history    |
+| `<leader>sC` | Commands           |
+| `<leader>sd` | Diagnostics        |
+| `<leader>sD` | Buffer diagnostics |
+| `<leader>sh` | Help pages         |
+| `<leader>sH` | Highlights         |
+| `<leader>si` | Icons              |
+| `<leader>sj` | Jumps              |
+| `<leader>sk` | Keymaps            |
+| `<leader>sl` | Location list      |
+| `<leader>sm` | Marks              |
+| `<leader>sM` | Man pages          |
+| `<leader>sp` | Plugin specs       |
+| `<leader>sq` | Quickfix list      |
+| `<leader>sR` | Resume last picker |
+| `<leader>su` | Undo history       |
+| `<leader>uC` | Colorschemes       |
+
+---
+
+### LSP
+
+| Key          | Action                |
+| ------------ | --------------------- |
+| `gd`         | Go to definition      |
+| `gD`         | Go to declaration     |
+| `gr`         | References            |
+| `gI`         | Go to implementation  |
+| `gy`         | Go to type definition |
+| `gai`        | Incoming calls        |
+| `gao`        | Outgoing calls        |
+| `<leader>ss` | Document symbols      |
+| `<leader>sS` | Workspace symbols     |
+
+---
+
+### UI & Utilities
+
+| Key          | Action                    |
+| ------------ | ------------------------- |
+| `<leader>z`  | Toggle Zen mode           |
+| `<leader>Z`  | Toggle Zoom               |
+| `<leader>.`  | Toggle scratch buffer     |
+| `<leader>S`  | Select scratch buffer     |
+| `<leader>bd` | Delete buffer             |
+| `<leader>cR` | Rename file               |
+| `<leader>gB` | Git browse                |
+| `<leader>gg` | Lazygit                   |
+| `<leader>un` | Dismiss all notifications |
+| `<C-/>`      | Toggle terminal           |
+
+---
+
+### Notes
+
+- All pickers are powered by **Snacks**
+- Most mappings are lazy-loaded
+- Visual mode support is enabled where applicable
+- Keymaps are intentionally Telescope-compatible for muscle memory
