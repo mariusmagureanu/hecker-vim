@@ -1,9 +1,6 @@
 return {
 
-  { "chriskempson/base16-vim",        lazy = false },
-
-  { "morhetz/gruvbox",                lazy = false },
-
+  { "Shatur/neovim-ayu",              lazy = false },
   { "HiPhish/rainbow-delimiters.nvim" },
 
   { --* Makes hover window prettier *--

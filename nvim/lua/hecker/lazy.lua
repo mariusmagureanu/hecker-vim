@@ -1,11 +1,10 @@
 local LEADER = ","
-local THEME = "retrobox"
+local THEME = "ayu-dark"
 local LAZY_THEME = "desert"
 local LAZY_PATH = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 local LAZY_REPO = "https://github.com/folke/lazy.nvim.git"
 
 vim.g.mapleader = LEADER
-vim.cmd.colorscheme(THEME)
 vim.opt.rtp:prepend(LAZY_PATH)
 
 if not (vim.uv or vim.loop).fs_stat(LAZY_PATH) then
@@ -39,3 +38,5 @@ vim.api.nvim_create_autocmd("User", {
     end
   end,
 })
+
+vim.cmd.colorscheme(THEME)
