@@ -28,15 +28,4 @@ require("lazy").setup({
   checker = { enabled = true },
 })
 
-vim.api.nvim_create_autocmd("User", {
-  pattern = "LazyDone",
-  once = true,
-  callback = function()
-    local errors = require("lazy.core.util").get_errors()
-    if errors and #errors > 0 then
-      error("lazy.nvim errors detected")
-    end
-  end,
-})
-
 vim.cmd.colorscheme(THEME)
