@@ -21,6 +21,13 @@ return {
     words = { enabled = true },
   },
   keys = {
+    {
+      "<leader>ca",
+      function()
+        vim.lsp.buf.code_action({ apply = true })
+      end,
+      des = "Code Actions",
+    },
     -- Top Pickers & Explorer
     {
       "<leader><space>",
