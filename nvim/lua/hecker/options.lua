@@ -63,3 +63,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({ async = false })
 	end,
 })
+
+vim.keymap.set("n", "<leader>ca", function()
+  vim.lsp.buf.code_action({ apply = true })
+end, { desc = "Apply code action" })
