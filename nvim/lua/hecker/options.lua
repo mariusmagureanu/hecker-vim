@@ -1,6 +1,7 @@
 local opt = vim.opt
 
 opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
 opt.modifiable = true
 
 -- Decrease update time
@@ -19,7 +20,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
-opt.wrap = false
+opt.wrap = true
 
 -- search settings
 opt.ignorecase = true
