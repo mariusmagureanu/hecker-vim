@@ -18,8 +18,6 @@ return {
 
           -- when false:
           -- foo *Foo
-          -- ast "go/ast"
-          align_type_to_right = true,
           -- When true, label for field and variable will format like "foo: Foo"
           -- instead of go's original syntax "foo Foo". If align_type_to_right is
           -- true, this option has no effect.

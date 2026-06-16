@@ -16,6 +16,9 @@ return {
       "docker",
       "regex",
       "go",
+      "hcl",
+      "terraform",
+      "yaml",
     },
 
     ignore_install = {},
